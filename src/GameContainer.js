@@ -18,7 +18,7 @@ const GameContainer = () => {
   const [ playerTwoScore, setPlayerTwoScore ] = useState( 0 )
   const [ startButtonDisplayed, setStartButtonDisplayed ] = useState( false )
   const [ weaponsButtonsDisplayed, setWeaponsButtonsDisplayed ] = useState( true )
-  const [ isWinnerDisplayed, setIsWinnerDisplayed ] = useState( false )
+  // const [ isWinnerDisplayed, setIsWinnerDisplayed ] = useState( false )
 
 
   useEffect(()=> {
@@ -48,6 +48,7 @@ const GameContainer = () => {
   //   let gameInterval = setInterval(() => {
   //     count ++
   //     setPlayerTwoWeapon( weapons[Math.floor( Math.random() * weapons.length )])
+  //     setGameWinner("")
   //     setStartButtonDisplayed( false ) 
   //     if( count > 5 ){
   //       clearInterval( gameInterval )
@@ -69,16 +70,13 @@ const GameContainer = () => {
     if( playerOneWeapon === playerTwoWeapon ) 
     {
       setGameWinner( "This round is a draw" )
-      // setIsWinnerDisplayed ( true )
     } 
     else if (( playerOneWeapon === "rock" && playerTwoWeapon === "scissors" ) || ( playerOneWeapon === "scissors" && playerTwoWeapon === "paper") || (playerOneWeapon === "paper" && playerTwoWeapon === "rock" ))
     {
       setGameWinner( "YOU won this round" )
-      // setIsWinnerDisplayed ( true )
     } else 
     {
       setGameWinner( "Computer won this round" )
-      // setIsWinnerDisplayed ( true )
     }
     // setIsWinnerDisplayed ( true )
   };
@@ -138,7 +136,7 @@ const GameContainer = () => {
                     { weaponsButtonsDisplayed ? <img src={scissors} alt="scissors" className="weapon-button" onClick={ ()=> getPlayerOneWeapon( "scissors" ) }></img> : null}
                         <div>
                         { startButtonDisplayed ? <button className="start-button" onClick={ ()=> getPlayerTwoWeapon()} >Click to reveal Computer's Weapon</button> : null}
-                        { gameWinner.length ? <button className="start-button" onClick={ ()=> handleContinueGame()} >Continue Game</button> : null}
+                        { gameWinner.length > 0 ? <button className="start-button" onClick={ ()=> handleContinueGame()} >Continue Game</button> : null}
                         </div>
                   </div>
       </div>
