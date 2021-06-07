@@ -18,7 +18,8 @@ const GameContainer = () => {
   const [ playerTwoScore, setPlayerTwoScore ] = useState( 0 )
   const [ startButtonDisplayed, setStartButtonDisplayed ] = useState( false )
   const [ weaponsButtonsDisplayed, setWeaponsButtonsDisplayed ] = useState( true )
-  const [ showWeaponTwo, setShowWeaponTwo ] = useState( false )
+  const [ isWinnerDisplayed, setIsWinnerDisplayed ] = useState( false )
+
 
   useEffect(()=> {
     if( playerOneWeapon.length > 0) {
@@ -42,41 +43,44 @@ const GameContainer = () => {
   //     }, 750)
   // };
 
+  // const getPlayerTwoWeapon = () => {
+  //   let count = 0
+  //   let gameInterval = setInterval(() => {
+  //     count ++
+  //     setPlayerTwoWeapon( weapons[Math.floor( Math.random() * weapons.length )])
+  //     setStartButtonDisplayed( false ) 
+  //     if( count > 5 ){
+  //       clearInterval( gameInterval )
+        
+  //     }
+  //   }, 200)
+  //   announceWinner()
+  //   // setIsWinnerDisplayed( true )
+  // };
+
   const getPlayerTwoWeapon = () => {
-    let count = 0
-    let gameInterval = setInterval(() => {
-      count ++
-      setShowWeaponTwo( true )
-      setPlayerTwoWeapon( weapons[Math.floor( Math.random() * weapons.length )])
-      setStartButtonDisplayed( false ) 
-      if( count > 5 ){
-        clearInterval( gameInterval )
-        announceWinner()
-      }
-    }, 100)
-    
-
-  };
-
-//   const getPlayerTwoWeapon = () => {
-//       setShowWeaponTwo( true )
-//     setPlayerTwoWeapon( weapons[Math.floor( Math.random() * weapons.length )])
-//     announceWinner()
-//     setStartButtonDisplayed( false ) 
-// };
+      // setShowWeaponTwo( true )
+    setPlayerTwoWeapon( weapons[Math.floor( Math.random() * weapons.length )])
+    announceWinner()
+    setStartButtonDisplayed( false ) 
+};
 
   const announceWinner = () => {
     if( playerOneWeapon === playerTwoWeapon ) 
     {
       setGameWinner( "This round is a draw" )
+      // setIsWinnerDisplayed ( true )
     } 
     else if (( playerOneWeapon === "rock" && playerTwoWeapon === "scissors" ) || ( playerOneWeapon === "scissors" && playerTwoWeapon === "paper") || (playerOneWeapon === "paper" && playerTwoWeapon === "rock" ))
     {
       setGameWinner( "YOU won this round" )
+      // setIsWinnerDisplayed ( true )
     } else 
     {
       setGameWinner( "Computer won this round" )
+      // setIsWinnerDisplayed ( true )
     }
+    // setIsWinnerDisplayed ( true )
   };
   
 
