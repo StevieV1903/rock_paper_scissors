@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# [Rock, Paper, Scissors](https://main.d8crcfdicg30c.amplifyapp.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple responsive Rock, Paper, Scissors SPA, written in javascript, using React as the web framework. It allows a player to pick a weapon and play against the computer's weapon that is selected at random. The winner gets a point added to their score and the scores can be reset at any time on the click of a button. A cool little app to kill a few minutes boredom!!
 
-## Available Scripts
+The application is hosted on AWS Amplify
 
-In the project directory, you can run:
+This responsive project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
-### `npm start`
+### ToDo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Currently there is some additional work required around displaying the images more fluidly on render. There seems to be some delay in pulling the image through on the hosted version of the application.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Clone
 
-### `npm run build`
+- Clone this repo to your local machine 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> Install packages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell
+> npm install
+```
 
-### `npm run eject`
+> Start the application
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```shell
+> npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Web Screenshots
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img width="400" alt="Screenshot 2021-06-23 at 12 44 31" src="https://user-images.githubusercontent.com/56826534/123095812-5e3f8900-d426-11eb-9e17-4139b0cbc8d2.png">
+<img width="400" alt="Screenshot 2021-06-23 at 12 44 43" src="https://user-images.githubusercontent.com/56826534/123095847-67c8f100-d426-11eb-8fe9-d0982a28a151.png">
+<img width="400" alt="Screenshot 2021-06-23 at 12 45 30" src="https://user-images.githubusercontent.com/56826534/123095887-71525900-d426-11eb-8696-2bd67396a0ae.png">
+<img width="400" alt="Screenshot 2021-06-23 at 12 45 38" src="https://user-images.githubusercontent.com/56826534/123095922-79aa9400-d426-11eb-8438-9c92cd2802cf.png">
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
