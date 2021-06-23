@@ -36,7 +36,6 @@ const GameContainer = () => {
 
   // const getPlayerTwoWeapon = () => {
   //       setTimeout(() => { 
-  //         setShowWeaponTwo( true )
   //       setPlayerTwoWeapon( weapons[Math.floor( Math.random() * weapons.length )])
   //       announceWinner()
   //       setStartButtonDisplayed( false ) 
@@ -60,7 +59,6 @@ const GameContainer = () => {
   // };
 
   const getPlayerTwoWeapon = () => {
-      // setShowWeaponTwo( true )
     setPlayerTwoWeapon( weapons[Math.floor( Math.random() * weapons.length )])
     announceWinner()
     setStartButtonDisplayed( false ) 
